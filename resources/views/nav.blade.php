@@ -15,16 +15,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="index.php">Home</a>
+                    <a href="{{url('/')}}">Home</a>
                 </li>
                 <li>
-                    <a href="about.php">About</a>
+                    <a href="{{url('/about')}}">About</a>
                 </li>
                 <li>
-                    <a href="blog.php">Blog</a>
+                    <a href="{{url('/blog')}}">Blog</a>
                 </li>
                 <li>
-                    <a href="contact.php">Contact</a>
+                    <a href="{{url('/contact')}}">Contact</a>
                 </li>
             </ul>
         </div>
