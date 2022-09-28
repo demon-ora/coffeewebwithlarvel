@@ -40,4 +40,32 @@ class Auth extends Controller
         return view('welcome');
       }
 }
+
+
+public function logblog(Request $request)
+{
+    
+    // echo "<pre>";
+    // print_r($request->all());
+    if($request->email == 'ora@gmail.com' && $request->password == 'ora123'){
+        $users= User::all();
+        $request->session()->put('userid',$request->email);
+        $data= compact('users');
+        return view('dashboard')->with($data);
+    }else{
+ $user= User::where('email','=',$request->email)->first();
+
+if($user)
+{
+    if(Hash::check($request->password,$user->password)){
+     $request->session()->put('userid',$user->id);
+     return view('blog');
+    }
+}
+ else 
+ {
+  return back()->with('error','password or email is wrong');
+ }
+ return back()->with('errorno','password or email is wrong');}
+}
 }

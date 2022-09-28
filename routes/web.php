@@ -16,5 +16,7 @@ use App\Http\Controllers\Auth;
 Route::get('/',[Home::class,'home']);
 Route::get('/about',[Home::class,'about']);
 Route::get('/login',[Auth::class,'login']);
+Route::post('/login',[Auth::class,'logblog']);
 Route::get('/reg',[Auth::class,'reg']);
 Route::post('/reg',[Auth::class,'store']);
+Route::get('/blog',[Home::class,'blog']);
