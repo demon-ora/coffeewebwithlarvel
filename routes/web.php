@@ -20,3 +20,4 @@ Route::post('/login',[Auth::class,'logblog']);
 Route::get('/reg',[Auth::class,'reg']);
 Route::post('/reg',[Auth::class,'store']);
 Route::get('/blog',[Home::class,'blog']);
+Route::get('/contact',[Home::class,'contact']);
