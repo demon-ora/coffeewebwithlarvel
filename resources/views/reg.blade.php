@@ -48,15 +48,16 @@
                     </h2>
 					<div id="add_err2"></div>
                     <hr>       
-                    <form role="form">
+                    <form role="form" action="{{url('/')}}/reg" method="post">
+                        @csrf
                         <div class="row">
                             <div class="form-group col-lg-4">
                                 <label>First Name</label>
-                                <input type="text" id="fname" name="fname" maxlength="25" class="form-control">
+                                <input type="text" id="fname" name="name" maxlength="25" class="form-control">
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Last Name</label>
-                                <input type="text" id="lname" name="lname" maxlength="25" class="form-control">
+                                <input type="text" id="lname" name="last" maxlength="25" class="form-control">
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Email Address</label>

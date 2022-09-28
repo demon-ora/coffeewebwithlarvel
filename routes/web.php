@@ -17,3 +17,4 @@ Route::get('/',[Home::class,'home']);
 Route::get('/about',[Home::class,'about']);
 Route::get('/login',[Auth::class,'login']);
 Route::get('/reg',[Auth::class,'reg']);
+Route::post('/reg',[Auth::class,'store']);
