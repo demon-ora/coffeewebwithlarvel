@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\Auth;
+use App\Http\Controllers\Dashboard;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +22,7 @@ Route::get('/reg',[Auth::class,'reg']);
 Route::post('/reg',[Auth::class,'store']);
 Route::get('/blog',[Home::class,'blog']);
 Route::get('/contact',[Home::class,'contact']);
+Route::get('/dashboard',[Dashboard::class,'dash']);
+Route::get('/dashboard/delete/{id}',[Dashboard::class,'destory']);
+Route::get('/dashboard/edit/{id}',[Dashboard::class,'edit']);
+Route::post('/dashboard/update/{id}',[Dashboard::class,'update']);

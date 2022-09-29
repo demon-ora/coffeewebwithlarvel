@@ -38,63 +38,38 @@
     <!-- Navigation -->
 @include('nav')
 
-
     <div class="container">
-
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Contact
-                        <strong>The Perfect Cup</strong>
-                    </h2>
-                    <hr>
-                </div>
-                <div class="col-md-8">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7706.132500203579!2d85.31614591817383!3d27.677824399273355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19eb1dad6439%3A0xbb1689fdcee3740b!2sLabim%20Mall!5e0!3m2!1sen!2snp!4v1664376695914!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class="col-md-4">
-                    <p>Phone:
-                        <strong>123.456.342343</strong>
-                    </p>
-                    <p>Email:
-                        <strong><a href="mailto:some@something.com">some@something.com</a></strong>
-                    </p>
-                    <p>Address:
-                        <strong>Lalitpur Patan dhoka, AB 9391
-                            <br>1234 Nepal  </strong>
-                    </p>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Contact
+                    <h2 class="intro-text text-center">Registration
                         <strong>form</strong>
                     </h2>
-                    <hr>
-                    <div id="add_err2"></div>
-                    <form role="form">
+					<div id="add_err2"></div>
+                    <hr>       
+                    <form role="form" action="{{url('/dashboard/update')}}/{{$user->id}}" method="post">
+                        @csrf
                         <div class="row">
                             <div class="form-group col-lg-4">
-                                <label>Name</label>
-                                <input type="text" id="fname" name="fname" maxlength="25" class="form-control">
+                                <label>First Name</label>
+                                <input type="text" id="fname" name="name" maxlength="25" class="form-control" value="{{$user->name}}">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Last Name</label>
+                                <input type="text" id="lname" name="last" maxlength="25" class="form-control" value="{{$user->lastname}}">
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Email Address</label>
-                                <input type="email" id="email" name="email" maxlength="25" class="form-control">
+                                <input type="email" id="email" name="email" maxlength="25" class="form-control" value="{{$user->email}}">
                             </div>
                             <div class="clearfix"></div>
                             <div class="form-group col-lg-12">
-                                <label>Message</label>
-                                <textarea class="form-control" id="message" name="message" maxlength="100" rows="6"></textarea>
+                                <label>Password</label>
+                                <input type="password" id="password" name="password" maxlength="10" class="form-control" value="">
                             </div>
-                            <div class="form-group col-lg-12">                           
-                                <button type="submit"  id="contact" class="btn btn-default">Submit</button>
+                            <div class="form-group col-lg-12">
+                                <button type="submit" id="register" class="btn btn-default">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -109,8 +84,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; The Perfect COFEE 2022</p>
-                    
+                    <p>Copyright &copy; The Perfect COFFEE 2022</p>
                 </div>
             </div>
         </div>
