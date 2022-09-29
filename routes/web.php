@@ -32,3 +32,8 @@ Route::get('/dashboardcontact',[Dashboard::class,'dashcontact']);
 Route::get('/dashboardcontact/delete/{id}',[Dashboard::class,'destorycontact']);
 Route::get('/dashboardcontact/edit/{id}',[Dashboard::class,'editcontact']);
 Route::post('/dashboardcontact/update/{id}',[Dashboard::class,'updatecontact']);
+Route::get('/dashboardblog',[Dashboard::class,'dashblog']);
+Route::post('/dashboardblog',[Dashboard::class,'store']);
+Route::get('/dashboardblog/delete/{id}',[Dashboard::class,'destoryblog']);
+Route::get('/dashboardblog/edit/{id}',[Dashboard::class,'editblog']);
+Route::post('/dashboardblog/update/{id}',[Dashboard::class,'updateblog']);

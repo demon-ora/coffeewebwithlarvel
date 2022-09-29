@@ -20,64 +20,37 @@ body {background-image: repeating-linear-gradient(249deg, transparent 0px, trans
 <body>
 <nav class="ss-menu ">
     <ul>
-        <li><a href="#1"><i class="fab fa-js"></i> Dashboarduser</a></li>
-        <li><a href="#1"><i class="fab fa-css3"></i> Contact</a></li>
-        <li><a href="#1"><i class="fab fa-react"></i>BLOG</a></li>
-        <li><a href="#1"><i class="fab fa-angular"></i> logOUT</a></li>
+        <li><a href="#1"><i class="fa fa-user"></i> Dashboarduser</a></li>
+        <li><a href="#1"><i class="fa fa-phone"></i> Contact</a></li>
+        <li><a href="#1"><i class="fa fa-blog"></i>BLOG</a></li>
+        <li><a href="#1"><i class="fa fa-coffee"></i> logOUT</a></li>
      </ul>
       </nav>
       <div class="container">
 
         <a href="{{url('/')}}/reg"  style="text-decoration: none;"  >Add user</a>
 
-        <form action="{{url('/')}}/dashboardblog" method="post" enctype="multipart/form-data"> 
+        <form action="{{url('/dashboardblog/update')}}/{{$blog->id}}" method="post" enctype="multipart/form-data"> 
             @csrf
             <div class="form-group">
               <label>Title</label>
-              <input type="text" class="form-control" placeholder="Title"style="width:50%;" name="title" >
+              <input type="text" class="form-control" placeholder="Title"style="width:50%;" name="title" value="{{$blog->title}}">
             </div>
             <div class="form-group">
                 <label>Date</label>
-                <input type="date" class="form-control" placeholder="Title" style="width:50%;" name="dob" min="<?php echo date("Y-m-d"); ?>" >
+                <input type="date" class="form-control" placeholder="Title" style="width:50%;" name="dob" min="<?php echo date("Y-m-d"); ?>" value="{{$blog->dob}}" >
               </div>
             <div class="form-group">
                 <label for="exampleFormControlFile1">Example file input</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image" >{{$blog->image}}
+                   <input type="hidden" id="myFile" name="oldimage" value="{{$blog->image}}" >
               </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="des"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="des">{{$blog->des}}</textarea>
               </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form><br><br>
-          <table class="table table-sm ">
-            <thead>
-              <tr class="col" >
-                <th>ID</th>
-                <th>Title</th>
-                <th>DOb</th>
-                <th>Image</th>
-                <th>Des</th>
-                <th>Delete</th>
-                <th>Update</th>
-              </tr>
-            </thead>
-            <tbody>
-                @foreach ( $blogs as $blog )
-                <tr>
-                  <td>{{$blog->id}}</td>
-                  <td>{{$blog->title}}</td>
-                  <td>{{$blog->dob}}</td>
-                  <td><img src="{{asset('storage/imgg/'.$blog->image)}}" height="50" width="50" style="object-fit: cover;"></td>
-                  <td>{{$blog->des}}</td>
-                  <td>
-                    <a href="{{url('/dashboardblog/delete')}}/{{$blog->id}}" onclick="return confirm('Are you sure to delete?')"><i class="fas fa-trash-alt fa-2x"></i></a></td>
-                   <td> <a href="{{url('/dashboardblog/edit')}}/{{$blog->id}}"><button type="button" class="btn btn-warning">edit</button></a>
-                  </td>
-                </tr>
-                @endforeach
-            </tbody>
-          </table>
       </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="{{url('forntend/js/jquery.ss.menu.js')}}"></script>

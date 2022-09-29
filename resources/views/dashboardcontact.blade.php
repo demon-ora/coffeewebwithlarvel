@@ -19,17 +19,12 @@ body {background-image: repeating-linear-gradient(249deg, transparent 0px, trans
 
 <body>
 <nav class="ss-menu ">
-         <ul>
-            <li><a href="#1"><i class="fab fa-js"></i> JavaScript</a></li>
-            <li><a href="#1"><span class="ss-badge">6</span> <i class="fab fa-html5"></i> HTML5</a></li>
-            <li><a href="#1"><i class="fab fa-css3"></i> CSS3</a></li>
-            <li><a href="#1"><i class="fab fa-react"></i> React</a></li>
-            <li><a href="#1"><i class="fab fa-angular"></i> Angular</a></li>
-            <li><a href="#1"><i class="fab fa-vuejs"></i> Vue.js</a></li>
-            <li><a href="#1"><i class="fas fa-cogs"></i> Settings</a></li>
-            <li><a href="#1"><i class="fas fa-address-book"></i> Contact</a></li>
-            <li><a href="#1"><i class="fas fa-sign-in-alt"></i> Sign-in</a></li>
-         </ul>
+  <ul>
+    <li><a href="#1"><i class="fab fa-js"></i> Dashboarduser</a></li>
+    <li><a href="#1"><i class="fab fa-css3"></i> Contact</a></li>
+    <li><a href="#1"><i class="fab fa-react"></i>BLOG</a></li>
+    <li><a href="#1"><i class="fab fa-angular"></i> logOUT</a></li>
+ </ul>
       </nav>
       <div class="container">
 
