@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\Auth;
 use App\Http\Controllers\Dashboard;
+use App\Http\Controllers\Contacts;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,7 +23,12 @@ Route::get('/reg',[Auth::class,'reg']);
 Route::post('/reg',[Auth::class,'store']);
 Route::get('/blog',[Home::class,'blog']);
 Route::get('/contact',[Home::class,'contact']);
+Route::post('/contact',[Contacts::class,'storecontact']);
 Route::get('/dashboard',[Dashboard::class,'dash']);
 Route::get('/dashboard/delete/{id}',[Dashboard::class,'destory']);
 Route::get('/dashboard/edit/{id}',[Dashboard::class,'edit']);
 Route::post('/dashboard/update/{id}',[Dashboard::class,'update']);
+Route::get('/dashboardcontact',[Dashboard::class,'dashcontact']);
+Route::get('/dashboardcontact/delete/{id}',[Dashboard::class,'destorycontact']);
+Route::get('/dashboardcontact/edit/{id}',[Dashboard::class,'editcontact']);
+Route::post('/dashboardcontact/update/{id}',[Dashboard::class,'updatecontact']);

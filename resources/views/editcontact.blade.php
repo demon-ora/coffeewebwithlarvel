@@ -78,21 +78,21 @@
                     </h2>
                     <hr>
                     <div id="add_err2"></div>
-                    <form role="form" action="{{url('/')}}/contact" method="post">
+                    <form role="form" action="{{url('/dashboardcontact/update')}}/{{$contact->id}}" method="post">
                         @csrf
                         <div class="row">
                             <div class="form-group col-lg-4">
                                 <label>Name</label>
-                                <input type="text" id="fname" name="name" maxlength="25" class="form-control">
+                                <input type="text" id="fname" name="name" maxlength="25" class="form-control"  value="{{$contact->name}}">
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Email Address</label>
-                                <input type="email" id="email" name="email" maxlength="25" class="form-control">
+                                <input type="email" id="email" name="email" maxlength="25" class="form-control"  value="{{$contact->email}}">
                             </div>
                             <div class="clearfix"></div>
                             <div class="form-group col-lg-12">
                                 <label>Message</label>
-                                <textarea class="form-control" id="message" name="message" maxlength="100" rows="6"></textarea>
+                                <textarea class="form-control" id="message" name="message" maxlength="100" rows="6" > {{$contact->message}}</textarea>
                             </div>
                             <div class="form-group col-lg-12">                           
                                 <button type="submit"  id="contact" class="btn btn-default">Submit</button>
