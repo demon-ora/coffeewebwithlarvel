@@ -34,12 +34,13 @@
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
-                    
-					<div class="alert alert-danger">
-					<strong>You must be logged in to view the blog.</strong>
-					</div>
-
-					
+                    @if (session()->has('error'))
+                    <div class="alert alert-danger">{{session()->get('error')}}</div>
+                @elseif (session()->has('errorno'))
+                <div class="alert alert-danger">{{session()->get('errorno')}}</div>
+                @elseif (session()->has('fail'))
+                <div class="alert alert-danger">{{session()->get('fail')}}</div>
+                @endif	
 					<hr>
                     <h2 class="intro-text text-center">
                         <strong>Login</strong>

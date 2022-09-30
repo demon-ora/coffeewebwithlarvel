@@ -33,17 +33,7 @@
 <body>
 
     <div class="brand">The Perfect COFFEE</div>
-    <div class="address-bar">1234 Nepal  | Lalitpur Patan dhoka, AB 9391 | 231.213.121</div>
-
-
-			
-			<div class="alert alert-success">
-			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-			<strong>You have been logged out of the system.</strong>
-			</div>   
-
-
-	
+    <div class="address-bar">1234 Nepal  | Lalitpur Patan dhoka, AB 9391 | 231.213.121</div>	
     <!-- Navigation -->
 @include('nav')
     <div class="container">

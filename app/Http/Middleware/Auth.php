@@ -17,7 +17,7 @@ class Auth
     public function handle(Request $request, Closure $next)
     {
         if(!session()->has('userid')){
-            return redirect('/login');     
+            return redirect('/login')->with('fail','you must be login to view blog');     
         }
             return $next($request);     
     }
