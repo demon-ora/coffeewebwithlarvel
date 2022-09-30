@@ -20,10 +20,10 @@ body {background-image: repeating-linear-gradient(249deg, transparent 0px, trans
 <body>
 <nav class="ss-menu ">
     <ul>
-        <li><a href="#1"><i class="fa fa-user"></i> Dashboarduser</a></li>
-        <li><a href="#1"><i class="fa fa-phone"></i> Contact</a></li>
-        <li><a href="#1"><i class="fa fa-blog"></i>BLOG</a></li>
-        <li><a href="#1"><i class="fa fa-coffee"></i> logOUT</a></li>
+      <li><a href="{{url('/dashboard')}}"><i class="fa fa-user"></i> Dashboarduser</a></li>
+      <li><a href="{{url('/dashboardcontact')}}"><i class="fa fa-phone"></i> Contact</a></li>
+      <li><a href="{{url('/dashboardblog')}}"><i class="fa fa-blog"></i>BLOG</a></li>
+      <li><a href="{{url('/dashboard/logout')}}"><i class="fa fa-coffee"></i> logOUT</a></li>
      </ul>
       </nav>
       <div class="container">
