@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Blog;
 use Hash;
 
 class Auth extends Controller
@@ -59,7 +60,11 @@ if($user)
 {
     if(Hash::check($request->password,$user->password)){
      $request->session()->put('userid',$user->id);
-     return view('blog');
+     $blogs= Blog::all();
+     // echo "<pre>";
+     // print_r($contacts->toArray());
+     $data= compact('blogs');
+     return view('blog')->with($data);
     }
 }
  else 

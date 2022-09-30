@@ -20,10 +20,10 @@ body {background-image: repeating-linear-gradient(249deg, transparent 0px, trans
 <body>
 <nav class="ss-menu ">
   <ul>
-    <li><a href="#1"><i class="fab fa-js"></i> Dashboarduser</a></li>
-    <li><a href="#1"><i class="fab fa-css3"></i> Contact</a></li>
-    <li><a href="#1"><i class="fab fa-react"></i>BLOG</a></li>
-    <li><a href="#1"><i class="fab fa-angular"></i> logOUT</a></li>
+    <li><a href="#1"><i class="fa fa-user"></i> Dashboarduser</a></li>
+    <li><a href="#1"><i class="fa fa-phone"></i> Contact</a></li>
+    <li><a href="#1"><i class="fa fa-blog"></i>BLOG</a></li>
+    <li><a href="#1"><i class="fa fa-coffee"></i> logOUT</a></li>
  </ul>
       </nav>
       <div class="container">

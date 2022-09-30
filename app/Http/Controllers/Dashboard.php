@@ -168,4 +168,10 @@ public function destoryblog($id)
 } 
 
 
+public function logout(Request $request)
+{
+ $request->session()->forget('userid');
+  return view('login');
+}
+
 }

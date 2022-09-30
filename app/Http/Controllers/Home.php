@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Blog;
 
 class Home extends Controller
 {
@@ -18,7 +19,11 @@ class Home extends Controller
 
     public function blog()
     {
-      return view('blog');
+      $blogs= Blog::all();
+      // echo "<pre>";
+      // print_r($contacts->toArray());
+      $data= compact('blogs');
+      return view('blog')->with($data);
     }
 
 
@@ -27,4 +32,10 @@ class Home extends Controller
       return view('contact');
     }
 
+
+  public function logout(Request $request)
+  {
+   $request->session()->forget('userid');
+    return view('login');
+  }
 }

@@ -36,7 +36,7 @@
             <div class="box">
                 <div class="col-lg-12">
 				
-				<h2 class="text-center">Welcome  - <a href="">Logout</a></h2>
+				<h2 class="text-center">Welcome  - <a href="{{url('/home/logout')}}">Logout</a></h2>
 				
                     <hr>
                     <h2 class="intro-text text-center">The Perfect Cup
@@ -44,112 +44,22 @@
                     </h2>
                     <hr>
                 </div>
+                @foreach ( $blogs as $blog )
                 <div class="col-lg-12 text-center">
-                    <img class="img-responsive img-border img-full" src="{{url('forntend/img/slide-1.jpg')}}" alt="">
-                    <h2>COCONUT OIL COFFEE
+                    <img class="img-responsive img-border img-full" src="{{asset('storage/imgg/'.$blog->image)}}" alt="">
+                    <h2>{{$blog->title}}
                         <br>
-                        <small>OCTOBER 13, 2016</small>
+                        <small>{{$blog->dob}}</small>
                     </h2>
-                    <p>Start your morning off with this great recipe for hot coffee with coconut oil and butter.</p>
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Read More</button>
+                    <p>{{$blog->des}}</p>
                     <hr>
                 </div>
-                <div class="col-lg-12 text-center">
-                    <img class="img-responsive img-border img-full" src="{{url('forntend/img/slide-2.jpg')}}" alt="">
-                    <h2>IRISH COFFEE 
-                        <br>
-                        <small>SEPTEMBER, 2014</small>
-                    </h2>
-                    <p>Take the edge off with a Fresh hot cup of coffee made with Irish whiskey and Irish Cream.</p>
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Read More</button>
-                    <hr>
-                </div>
-                <div class="col-lg-12 text-center">
-                    <img class="img-responsive img-border img-full" src="{{url('forntend/img/slide-3.jpg')}}" alt="">
-                    <h2>FROZEN CARAMEL LATTE 
-                        <br>
-                        <small>JULY 18, 2012</small>
-                    </h2>
-                    <p>Sweetened with caramel sauce and topped with whipped cream, this will make you happy any time of day.</p>
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">Read More</button>
-                    <hr>
-                </div>
-                <div class="col-lg-12 text-center">
-                    <ul class="pager">
-                        <li class="previous"><a href="#">&larr; Older</a>
-                        </li>
-                        <li class="next"><a href="#">Newer &rarr;</a>
-                        </li>
-                    </ul>
-                </div>
+                @endforeach
             </div>
         </div>
 
     </div>
     <!-- /.container -->
-
-	<!-- Modal 1 -->
-	<div id="myModal" class="modal fade" role="dialog">
-	  <div class="modal-dialog">
-
-		<!-- Modal content-->
-		<div class="modal-content">
-		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal">&times;</button>
-			<h4 class="modal-title">Coconut Oil Coffee</h4>
-		  </div>
-		  <div class="modal-body">
-			<p>Sample Text.</p>
-		  </div>
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		  </div>
-		</div>
-
-	  </div>
-	</div>
-	
-	<!-- Modal 2 -->
-	<div id="myModal2" class="modal fade" role="dialog">
-	  <div class="modal-dialog">
-
-		<!-- Modal content-->
-		<div class="modal-content">
-		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal">&times;</button>
-			<h4 class="modal-title">Irish Coffee</h4>
-		  </div>
-		  <div class="modal-body">
-			<p>Sample Text.</p>
-		  </div>
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		  </div>
-		</div>
-
-	  </div>
-	</div>
-	
-	<!-- Modal 3 -->
-	<div id="myModal3" class="modal fade" role="dialog">
-	  <div class="modal-dialog">
-
-		<!-- Modal content-->
-		<div class="modal-content">
-		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal">&times;</button>
-			<h4 class="modal-title">Frozen Caramel Latte</h4>
-		  </div>
-		  <div class="modal-body">
-			<p>Sample Text.</p>
-		  </div>
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		  </div>
-		</div>
-
-	  </div>
-	</div>
 	
     <footer>
         <div class="container">
